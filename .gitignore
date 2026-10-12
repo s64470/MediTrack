@@ -1,1 +1,37 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
 
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Logs
+*.log
+
+# Temporäre Dateien
+*.tmp
+*.temp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# Umgebungsdateien
+.env
