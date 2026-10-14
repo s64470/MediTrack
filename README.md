@@ -173,8 +173,7 @@ Verwalten von Änderungen direkt beim Programmieren durch integrierter Git-Unter
 # Typischer Git-Workflow
 1. Repository klonen
 ```bash
-git clone
-<repository-url>
+git clone <repository-url>
 ```
 2. Neuen Branch erstellen
 ```bash
