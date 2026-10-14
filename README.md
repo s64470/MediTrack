@@ -62,6 +62,7 @@ git status
 ```
 Zeigt den aktuellen Zustand des Repositories an.
 
+<<<<<<< Updated upstream
 
 # Branches und ihre Nutzung
 ## Was ist ein Branch?
@@ -104,5 +105,32 @@ Mit diesem Befehl können Änderungen eines Branches in den aktuell ausgewählte
 git branch -d feature-branch
 ```
 Mit diesem Befehl wird ein nicht mehr benötigter Branch lokal gelöscht.
+---
 
+# Umgang mit Merge-Konflikten
+## Was ist ein Merge-Konflikt?
+Git Änderungen aus verschiedenen Branches können nicht automatisch zusammengeführt werden, z. B. wenn mehrere Personen dieselbe Stelle unterschiedlich bearbeiten. Dadurch entsteht ein Menge-Konflikt. 
+
+Beispiel: 
+```text
+<<<<<<< HEAD
+Alter Inhalt
+=======
+Neuer Inhalt 
+>>>>>>> feature-branch
+```
+
+## Konflikt lösen
+1. Konflikt im Pull Request erkennen.
+2. Änderungen vergleichen.
+3. Gewünschte Änderung auswählen.
+4. Konfliktmarkierungen entfernen.
+5. Änderungen speichern.
+6. Ergebnis überprüfen
+7. Merge abschließen.
+
+## Konflikte vermeiden
+- Regelmäßig Änderungen synchronisieren.
+- Sorgfältige Kommunikation im Team.
+- Gleichzeitige Bearbeitungen an derselben Datei vermeiden. 
 
