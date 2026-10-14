@@ -204,6 +204,6 @@ git pull origin main
 
 | Teammitglied |
 |-------------|
-| Daniel Riel | Was ist Git? + Grundlegende Git-Befehle
-| Lara Spies | Branches + Git mit IntelliJ/PyCharm
-| Thijambaki Kirushnathasan | Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen 
+| Daniel Riel (Was ist Git? + Grundlegende Git-Befehle) |
+| Lara Spies  (Branches + Git mit IntelliJ/PyCharm) |
+| Thijambaki Kirushnathasan  (Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen) | 
