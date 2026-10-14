@@ -61,7 +61,7 @@ Aktualisiert das lokale Repository mit den neuesten Änderungen.
 git status
 ```
 Zeigt den aktuellen Zustand des Repositories an.
----
+
 
 # Branches und ihre Nutzung
 ## Was ist ein Branch?
