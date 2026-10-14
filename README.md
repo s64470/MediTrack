@@ -63,18 +63,18 @@ git status
 Zeigt den aktuellen Zustand des Repositories an.
 ---
 
-#Branches und ihre Nutzung
-##Was ist ein Branch?
+# Branches und ihre Nutzung
+## Was ist ein Branch?
 Ein Branch ist ein Entwicklungszweig im Git. Durch ihn ist es möglich, Änderungen vorzunehmen ohne dabei den Hauptzweig zu beeinflussen. Dadurch ist es ebenso möglich, dass mehrere Personen unabhängig voneinander gleichzeitig an einem Projekt arbeiten können. 
 
 Der Haupt-Branch ist häufig main. Für neue Funktionen oder Änderungen ist es ebenso möglich, zusätzliche Branches zu erstellen. Nach der Bearbeitung können diese Änderungen dann überprüft und im Haupt-Branch übernommen werden. 
 
-##Warum sind Branches sinnvoll?
+## Warum sind Branches sinnvoll?
 - Mehrere Personen können gleichzeitig an einem Projekt arbeiten.
 - Neue Funktionen können getrennt entwickelt und getestet werden. 
 - Änderungen können überprüft werden.
 
-##wichtige Branch-Befehle
+## wichtige Branch-Befehle
 1. Vorhandene Branches anzeigen
 ```bash
 git branch
@@ -104,6 +104,5 @@ Mit diesem Befehl können Änderungen eines Branches in den aktuell ausgewählte
 git branch -d feature-branch
 ```
 Mit diesem Befehl wird ein nicht mehr benötigter Branch lokal gelöscht.
----
 
 
