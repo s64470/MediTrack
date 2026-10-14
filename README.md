@@ -134,3 +134,20 @@ Neuer Inhalt
 - Sorgfältige Kommunikation im Team.
 - Gleichzeitige Bearbeitungen an derselben Datei vermeiden. 
 
+
+# Git mit IntelliJ IDEA benutzen
+## Was ist IntelliJ IDEA?
+IntelliJ IDEA ist eine integrierte Entwicklungsumgebung, die besonders gut für die Programmierung in Java geeignet ist. Sie unterstützt beim Schreiben, Testen und Verwalten von Code.
+
+## Git-Unterstützung in IntelliJ IDEA
+IntelliJ IDEA verfügt über integrierte Git-Funktionen, wodurch es möglich ist, Repositories direkt in der Entwicklungsumgebung zu verwalten. 
+
+## zu den wichtigsten Funktionen gehören dabei:
+- Änderungen überprüfen: geänderte Dateien werden übersichtlich angezeigt.
+- Commits erstellen: Änderungen können mit einer Nachricht gespeichert werden. 
+- Branches verwalten: Neue Branches lassen sich erstellen und auswählen.
+- Push & Pull: Änderungen können in GitHub hochgeladen werden und von dort aus anschließend heruntergeladen werden. 
+- Merge & Konfliktlösung: Änderungen aus verschiedenen Branches können zusammengeführt werden.
+
+## Mit GitHub arbeiten
+Ein bestehendes Repository kann in IntelliJ IDEA geklont werden. Dabei lohnt es sich, für eine neue Aufgabe einen neuen Branch zu verwenden und kleine Commits erstellen zu können. 
