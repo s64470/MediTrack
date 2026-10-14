@@ -153,3 +153,58 @@ IntelliJ IDEA verfügt über integrierte Git-Funktionen, wodurch es möglich ist
 ## Mit GitHub arbeiten
 Ein bestehendes Repository kann in IntelliJ IDEA geklont werden. Dabei lohnt es sich, für eine neue Aufgabe einen neuen Branch zu verwenden und kleine Commits erstellen zu können. 
 
+
+# Nützliche Git-Tools und Plattformen
+## GitHub 
+Eine Plattform zur Verwaltung von Git-Repositiories und zur Zusammenarbeit an Projekten. Sie bietet außerdem Funktionen wie Branches, Pull Request und Code Reviews, die die Zusammenarbeit im Team unterstützen. 
+
+## GitLab
+Eine Alternative zu GitHub mit zusätzlich integrierten CI/CD-Pipelines (Continuous Integration/ Continuous Deployment) für Projektplanung und automatisierte Tests. 
+
+## Bitbucket
+Eine weitere Plattform zur Verwaltung von Git-Repositories. Sie wird häufig in Unternehmen eingesetzt.
+
+## SourceTree
+Stellt eine grafische Benutzeroberfläche für Git-Befehle und erleichtert die Verwaltung von Branches, Commits und Merges.
+
+## IntelliJ IDEA
+Verwalten von Änderungen direkt beim Programmieren durch integrierter Git-Unterstützung.
+
+# Typischer Git-Workflow
+1. Repository klonen
+```bash
+git clone
+<repository-url>
+```
+2. Neuen Branch erstellen
+```bash
+git checkout -b feature-branch
+```
+3. Änderungen durchführen über einem Editor
+4. Änderungen hinzufügen
+```bash
+git add .
+```
+5. Commit erstellen
+```bash
+git commit -m "Neue Inhalte hinzugefügt"
+```
+6. Änderungen hochladen
+```bash
+git push -u origin feature-branch
+```
+7. Pull Request erstellen über GitHub
+8. Code Review durchführen über GitHub
+9. Änderungen in den Haupt-Branch mergen über GitHub
+10. Repository aktualisieren
+```bash
+git pull origin main
+``` 
+
+# Dokumentation der Zusammenarbeit
+
+| Teammitglied |
+|-------------|
+| Daniel Riel | Was ist Git? + Grundlegende Git-Befehle
+| Lara Spies | Branches + Git mit IntelliJ/PyCharm
+| Thijambaki Kirushnathasan | Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen 
