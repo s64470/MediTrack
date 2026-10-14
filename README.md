@@ -62,8 +62,6 @@ git status
 ```
 Zeigt den aktuellen Zustand des Repositories an.
 
-<<<<<<< Updated upstream
-
 # Branches und ihre Nutzung
 ## Was ist ein Branch?
 Ein Branch ist ein Entwicklungszweig im Git. Durch ihn ist es möglich, Änderungen vorzunehmen ohne dabei den Hauptzweig zu beeinflussen. Dadurch ist es ebenso möglich, dass mehrere Personen unabhängig voneinander gleichzeitig an einem Projekt arbeiten können. 
@@ -105,8 +103,6 @@ Mit diesem Befehl können Änderungen eines Branches in den aktuell ausgewählte
 git branch -d feature-branch
 ```
 Mit diesem Befehl wird ein nicht mehr benötigter Branch lokal gelöscht.
-
-<<<<<<< Updated upstream
 
 # Umgang mit Merge-Konflikten
 ## Was ist ein Merge-Konflikt?
