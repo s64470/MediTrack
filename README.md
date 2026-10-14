@@ -106,6 +106,7 @@ git branch -d feature-branch
 ```
 Mit diesem Befehl wird ein nicht mehr benötigter Branch lokal gelöscht.
 
+<<<<<<< Updated upstream
 
 # Umgang mit Merge-Konflikten
 ## Was ist ein Merge-Konflikt?
@@ -151,3 +152,4 @@ IntelliJ IDEA verfügt über integrierte Git-Funktionen, wodurch es möglich ist
 
 ## Mit GitHub arbeiten
 Ein bestehendes Repository kann in IntelliJ IDEA geklont werden. Dabei lohnt es sich, für eine neue Aufgabe einen neuen Branch zu verwenden und kleine Commits erstellen zu können. 
+
