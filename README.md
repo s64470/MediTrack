@@ -105,7 +105,7 @@ Mit diesem Befehl können Änderungen eines Branches in den aktuell ausgewählte
 git branch -d feature-branch
 ```
 Mit diesem Befehl wird ein nicht mehr benötigter Branch lokal gelöscht.
----
+
 
 # Umgang mit Merge-Konflikten
 ## Was ist ein Merge-Konflikt?
