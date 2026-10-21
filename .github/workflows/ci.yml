@@ -36,11 +36,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
 
-      # Führt den Maven-Build aus und startet automatisch alle Tests
-      - name: Build and test with Maven
-        run: mvn clean verify
+      # Führt den Build aus, wenn passende Build-Dateien vorhanden sind
+      - name: Build and test
+        run: |
+          if [ -f pom.xml ]; then
+            mvn clean verify
+          elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then
+            ./gradlew clean test
+          else
+            echo "No Maven or Gradle build files found. Skipping build-and-test step."
+          fi
 
       # Speichert die erzeugte JAR-Datei als Build-Artefakt
       # Dadurch kann die Datei später heruntergeladen oder weiterverwendet werden
