@@ -34,14 +34,6 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v7
 
-      # Installiert Java und richtet die Java-Umgebung ein
-      - name: Set up Java
-        uses: actions/setup-java@v6
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: maven
-      
       # Prüft, ob es sich um ein Maven-Projekt handelt
       - name: Check Maven project
         id: maven-project
@@ -52,6 +44,15 @@ jobs:
           else
             echo "found=false" >> "$GITHUB_OUTPUT"
           fi
+
+      # Installiert Java und aktiviert Maven-Cache nur für Maven-Projekte
+      - name: Set up Java
+        if: steps.maven-project.outputs.found == 'true'
+        uses: actions/setup-java@v6
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
       
       # Baut und testet das Maven-Projekt
       - name: Build and test with Maven
