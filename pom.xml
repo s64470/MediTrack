@@ -24,6 +24,7 @@
     <!-- Java Version -->
     <properties>
         <java.version>17</java.version>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
     <!-- Abhängigkeiten -->
