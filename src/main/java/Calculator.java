@@ -1,4 +1,4 @@
-/**
+package com.meditrack;/**
  * Einfache Rechner-Klasse mit Additionsfunktion.
  */
 public class Calculator {
