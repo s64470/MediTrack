@@ -1,7 +1,7 @@
 # 1. Ausgangslage: Ihre Implementierungsstrategie aus Übung 3
 Die Strategie aus dem Dokument `6. Implementierungsstrategie.pdf` sieht eine schrittweise Umsetzung des DDD-Modells von MediTrack in Java vor, mit Maven als Build-Tool und JUnit für automatisierte Tests. Die Anwendung wird in drei Bounded Contexts unterteilt:
 
-Bounded Context	Verantwortlichkeit
+Bounded Context Verantwortlichkeit
 `Patientenverwaltung:` Registrierung, Verwaltung und Aktualisierung von Personendaten
 `Terminverwaltung:` Buchung, Verwaltung und Stornierung von Arztterminen
 `Behandlungsverwaltung:` Dokumentation von Behandlungen, Krankschreibungen und Überweisungen
