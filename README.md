@@ -279,3 +279,39 @@ git pull origin main
 | Daniel Riel (Was ist Git? + Grundlegende Git-Befehle)                                          |
 | Lara Spies  (Branches + Git mit IntelliJ/PyCharm)                                              |
 | Thijambaki Kirushnathasan  (Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen) |
+
+## Übung 2 – CI/CD
+
+### Verwendete Plattform
+
+Für MediTrack wird GitHub Actions als CI-Plattform verwendet. Sie ist direkt in GitHub integriert und automatisiert den Build- und Testprozess.
+
+### CI-Pipeline
+
+Der Workflow ist in `.github/workflows/ci.yml` definiert.
+
+Die Pipeline wird bei Pushes auf den Branch `main` und bei Pull Requests gegen `main` gestartet. Sie prüft das Maven-Projekt, richtet Java 21 ein und führt anschließend den Build sowie die automatisierten Tests mit Maven aus.
+
+Der Befehl lautet:
+
+```bash
+mvn --batch-mode --no-transfer-progress clean verify
+```
+
+Bei erfolgreichem Ablauf wird die erzeugte JAR-Datei als Artefakt hochgeladen und 14 Tage aufbewahrt.
+
+### Automatisierte Tests
+
+Die Tests werden mit Maven ausgeführt. Bei einem lokalen Testlauf wurden drei Tests in `CalculatorTest` erfolgreich ausgeführt. Es gab keine Fehler und keine fehlgeschlagenen Tests.
+
+### Pull Requests und Qualitätssicherung
+
+Pull Requests ermöglichen es, Änderungen vor dem Zusammenführen zu prüfen. GitHub Actions führt dafür automatisierte Build- und Testschritte aus.
+
+Ob GitHub das Zusammenführen bei fehlgeschlagenen Tests automatisch verhindert, hängt von den eingerichteten Branch-Schutzregeln ab.
+
+### Geplantes Deployment
+
+Ein vollständiges automatisches Deployment ist in dieser Übung noch nicht erforderlich. Später könnte MediTrack nach erfolgreichem Build und bestandenen Tests auf einem Server oder einer Cloud-Plattform bereitgestellt werden.
+
+Vorteile sind schnellere und reproduzierbare Bereitstellungen. Nachteile sind zusätzlicher Konfigurationsaufwand und Anforderungen an Sicherheit und Zugangsdaten.
