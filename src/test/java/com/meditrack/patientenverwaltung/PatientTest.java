@@ -107,4 +107,70 @@ class PatientTest {
             );
         });
     }
+    @Test
+    void patientendatenAktualisieren() {
+        Patient patient = new Patient(
+                1,
+                "Anna",
+                "Müller",
+                "Musterstraße 1",
+                "0123456789",
+                "anna@test.de"
+        );
+
+        patient.patientendatenAktualisieren(
+                "Neue Straße 2",
+                "01701234567",
+                "anna.neu@test.de"
+        );
+
+        assertEquals("Neue Straße 2", patient.getAdresse());
+        assertEquals("01701234567", patient.getTelefonnummer());
+        assertEquals("anna.neu@test.de", patient.getEmail());
+    }
+    @Test
+    void patientendatenDuerfenNichtMitUngueltigerEmailAktualisiertWerden() {
+        Patient patient = new Patient(
+                1, "Anna", "Müller", "Lübeck",
+                "01761234567", "anna@test.de"
+        );
+
+        assertThrows(IllegalArgumentException.class, () ->
+                patient.patientendatenAktualisieren(
+                        "Neue Straße 2", "01701234567", "keine-email"
+                )
+        );
+    }
+
+    @Test
+    void patientendatenDuerfenNichtMitUngueltigerTelefonnummerAktualisiertWerden() {
+        Patient patient = new Patient(
+                1, "Anna", "Müller", "Lübeck",
+                "01761234567", "anna@test.de"
+        );
+
+        assertThrows(IllegalArgumentException.class, () ->
+                patient.patientendatenAktualisieren(
+                        "Neue Straße 2", "abc123", "anna.neu@test.de"
+                )
+        );
+    }
+
+    @Test
+    void altePatientendatenBleibenBeiUngueltigerAktualisierungErhalten() {
+        Patient patient = new Patient(
+                1, "Anna", "Müller", "Lübeck",
+                "01761234567", "anna@test.de"
+        );
+
+        assertThrows(IllegalArgumentException.class, () ->
+                patient.patientendatenAktualisieren(
+                        "Neue Straße 2", "abc123", "keine-email"
+                )
+        );
+
+        assertEquals("Lübeck", patient.getAdresse());
+        assertEquals("01761234567", patient.getTelefonnummer());
+        assertEquals("anna@test.de", patient.getEmail());
+    }
 }
