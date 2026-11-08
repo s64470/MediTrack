@@ -1,3 +1,4 @@
+package com.meditrack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName(("Negative Zahlen korrekt addieren"))
+    @DisplayName("Negative Zahlen korrekt addieren")
     public void testAddNegativeNumbers() {
         assertEquals(-5, calculator.add(-2, -3));
     }
