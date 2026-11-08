@@ -31,6 +31,18 @@ public class TerminService {
             );
         }
 
+        boolean terminExistiert = repository.findeAlle().stream()
+                .anyMatch(
+                        gespeicherterTermin ->
+                                gespeicherterTermin.getId().equals(termin.getId())
+                );
+
+        if (!terminExistiert) {
+            throw new IllegalArgumentException(
+                    "Der Termin ist nicht im Repository gespeichert"
+            );
+        }
+
         termin.stornieren();
     }
 }

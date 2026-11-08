@@ -14,6 +14,18 @@ public class TerminRepository {
             );
         }
 
+        boolean idExistiertBereits = termine.stream()
+                .anyMatch(
+                        vorhandenerTermin ->
+                                vorhandenerTermin.getId().equals(termin.getId())
+                );
+
+        if (idExistiertBereits) {
+            throw new IllegalArgumentException(
+                    "Ein Termin mit dieser ID existiert bereits"
+            );
+        }
+
         termine.add(termin);
     }
 

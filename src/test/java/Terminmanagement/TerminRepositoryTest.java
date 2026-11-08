@@ -55,4 +55,30 @@ class TerminRepositoryTest {
 
         assertEquals(1, repository.findeAlle().size());
     }
+
+    @Test
+    void doppelteIdDarfNichtGespeichertWerden() {
+        TerminRepository repository = new TerminRepository();
+
+        Termin erster = new Termin(
+                1L, 10L, 20L,
+                LocalDateTime.now().plusDays(1),
+                "Erster Termin"
+        );
+
+        Termin zweiter = new Termin(
+                1L, 11L, 21L,
+                LocalDateTime.now().plusDays(2),
+                "Zweiter Termin"
+        );
+
+        repository.speichern(erster);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> repository.speichern(zweiter)
+        );
+
+        assertEquals(1, repository.findeAlle().size());
+    }
 }
