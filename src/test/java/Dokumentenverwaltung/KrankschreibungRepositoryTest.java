@@ -115,3 +115,4 @@ class KrankschreibungRepositoryTest {
         assertEquals(erste, repository.findeNachId(1L).orElseThrow());
     }
 }
+

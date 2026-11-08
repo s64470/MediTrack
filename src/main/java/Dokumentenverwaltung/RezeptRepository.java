@@ -11,3 +11,4 @@ public interface RezeptRepository {
 
     List<Rezept> findeAlle();
 }
+
