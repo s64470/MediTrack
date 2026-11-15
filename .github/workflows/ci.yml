@@ -34,16 +34,12 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v7
 
-      # Prüft, ob es sich um ein Maven-Projekt handelt
+      # Prüft, ob Maven-Builddateien vorhanden sind
       - name: Check Maven project
         id: maven-project
         shell: bash
         run: |
-          if [[ -f "pom.xml" ]]; then
-            echo "found=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "found=false" >> "$GITHUB_OUTPUT"
-          fi
+          echo "found=${{ hashFiles('**/pom.xml', '**/.mvn/wrapper/maven-wrapper.properties', '**/.mvn/extensions.xml') != '' }}" >> "$GITHUB_OUTPUT"
 
       # Installiert Java und aktiviert Maven-Cache nur für Maven-Projekte
       - name: Set up Java
