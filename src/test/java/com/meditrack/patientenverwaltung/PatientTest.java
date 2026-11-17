@@ -1,6 +1,7 @@
 package com.meditrack.patientenverwaltung;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PatientTest {
@@ -36,6 +37,7 @@ class PatientTest {
             );
         });
     }
+
     @Test
     void patientDarfKeinenLeerenNachnamenHaben() {
 
@@ -50,6 +52,7 @@ class PatientTest {
             );
         });
     }
+
     @Test
     void patientDarfKeineUngueltigeEmailHaben() {
 
@@ -79,6 +82,7 @@ class PatientTest {
             );
         });
     }
+
     @Test
     void patientDarfKeineLeereTelefonnummerHaben() {
 
@@ -93,6 +97,7 @@ class PatientTest {
             );
         });
     }
+
     @Test
     void patientDarfKeineEmailOhneAtZeichenHaben() {
 
@@ -107,6 +112,7 @@ class PatientTest {
             );
         });
     }
+
     @Test
     void patientendatenAktualisieren() {
         Patient patient = new Patient(
@@ -128,6 +134,7 @@ class PatientTest {
         assertEquals("01701234567", patient.getTelefonnummer());
         assertEquals("anna.neu@test.de", patient.getEmail());
     }
+
     @Test
     void patientendatenDuerfenNichtMitUngueltigerEmailAktualisiertWerden() {
         Patient patient = new Patient(

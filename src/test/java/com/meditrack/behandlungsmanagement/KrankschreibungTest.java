@@ -25,6 +25,7 @@ class KrankschreibungTest {
         assertEquals(LocalDate.of(2026, 11, 15), krankschreibung.getEnde());
         assertEquals("Grippe", krankschreibung.getGrund());
     }
+
     @Test
     void krankschreibungMitUngueltigemZeitraumAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->
@@ -37,6 +38,7 @@ class KrankschreibungTest {
                 )
         );
     }
+
     @Test
     void krankschreibungMitFehlendemBeginnAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->

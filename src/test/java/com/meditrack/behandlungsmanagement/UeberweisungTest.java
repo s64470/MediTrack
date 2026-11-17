@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class UeberweisungTest {
@@ -26,6 +25,7 @@ class UeberweisungTest {
         assertEquals("Kardiologie", ueberweisung.getFachrichtung());
         assertEquals("Abklärung von Herzbeschwerden", ueberweisung.getGrund());
     }
+
     @Test
     void ueberweisungOhneFachrichtungAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->
@@ -38,6 +38,7 @@ class UeberweisungTest {
                 )
         );
     }
+
     @Test
     void ueberweisungOhneDatumAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->

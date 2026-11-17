@@ -25,6 +25,7 @@ class BehandlungTest {
         assertEquals("Grippe", behandlung.getDiagnose());
         assertEquals("Patient wurde untersucht.", behandlung.getBeschreibung());
     }
+
     @Test
     void behandlungMitLeeremDiagnosetextAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->
@@ -37,6 +38,7 @@ class BehandlungTest {
                 )
         );
     }
+
     @Test
     void behandlungOhneDatumAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->
@@ -49,6 +51,7 @@ class BehandlungTest {
                 )
         );
     }
+
     @Test
     void behandlungMitUngueltigerPatientenIdAblehnen() {
         assertThrows(IllegalArgumentException.class, () ->
