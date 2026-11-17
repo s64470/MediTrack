@@ -82,6 +82,7 @@ class KrankschreibungRepositoryTest {
                 () -> repository.speichern(null)
         );
     }
+
     @Test
     void doppelteIdDarfNichtGespeichertWerden() {
         KrankschreibungRepository repository =
@@ -115,4 +116,3 @@ class KrankschreibungRepositoryTest {
         assertEquals(erste, repository.findeNachId(1L).orElseThrow());
     }
 }
-

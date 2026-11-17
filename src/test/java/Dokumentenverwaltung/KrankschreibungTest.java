@@ -120,6 +120,7 @@ class KrankschreibungTest {
                         "   "
                 ));
     }
+
     @Test
     void begruendungMitSonderzeichenIstErlaubt() {
         assertDoesNotThrow(() -> new Krankschreibung(

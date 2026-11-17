@@ -33,6 +33,7 @@ class PatientenRepositoryTest {
 
         assertTrue(ergebnis.isEmpty());
     }
+
     @Test
     void doppeltePatientenIdDarfNichtGespeichertWerden() {
         PatientenRepository repository = new PatientenRepository();
@@ -52,6 +53,7 @@ class PatientenRepositoryTest {
         assertThrows(IllegalArgumentException.class,
                 () -> repository.speichern(patient2));
     }
+
     @Test
     void nullDarfNichtGespeichertWerden() {
         PatientenRepository repository = new PatientenRepository();
@@ -59,6 +61,7 @@ class PatientenRepositoryTest {
         assertThrows(IllegalArgumentException.class,
                 () -> repository.speichern(null));
     }
+
     @Test
     void patientKontaktRecordSpeichertKontaktdaten() {
         PatientKontakt kontakt = new PatientKontakt(

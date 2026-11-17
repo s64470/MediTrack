@@ -85,6 +85,7 @@ class RezeptRepositoryTest {
                 () -> repository.speichern(null)
         );
     }
+
     @Test
     void doppelteIdDarfNichtGespeichertWerden() {
         RezeptRepository repository =
