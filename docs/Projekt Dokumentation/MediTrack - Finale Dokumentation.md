@@ -29,10 +29,12 @@ Prof. Dr. S. Ipek-Ugay
 
 ### Abgabedatum
 
-[TT.MM.JJJJ]
+TT.MM.JJJJ
 
 ## Projektthema
 
 MediTrack ist ein System zur Verwaltung und Überwachung von Patientendaten im Gesundheitswesen. Die Anwendung ermöglicht die Erfassung und Verwaltung von Patienteninformationen, Vitaldaten sowie Behandlungshistorien. Durch die kontinuierliche Überwachung kritischer Gesundheitswerte werden automatische Benachrichtigungen ausgelöst, um medizinisches Personal frühzeitig auf potenzielle Risiken aufmerksam zu machen und eine schnelle Reaktion zu ermöglichen.
 
 ## Einführung und Kontext
+### Motivation
+Die fortschreitende Digitalisierung im Gesundheitswesen erfordert leistungsfähige Systeme zur effizienten Verwaltung und Überwachung von Patientendaten. MediTrack wurde entwickelt, um medizinisches Personal durch die zentrale Erfassung von Patienteninformationen und die automatische Überwachung kritischer Gesundheitswerte zu unterstützen, sodass Risiken frühzeitig erkannt und die Patientensicherheit verbessert werden können.
