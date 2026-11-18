@@ -49,10 +49,68 @@ Zur Umsetzung des Systems werden Technologien für die Benutzerschnittstelle, di
 
 Für die Versionsverwaltung kommt Git zum Einsatz. Die Quellcodeverwaltung sowie die Dokumentation des Projekts erfolgen über die Plattform GitHub, wodurch Änderungen nachvollziehbar dokumentiert und eine kollaborative Softwareentwicklung unterstützt werden. Darüber hinaus ermöglicht die modulare Architektur von `MediTrack` eine einfache Erweiterung des Systems um zusätzliche Funktionen und zukünftige Integrationen im Gesundheitswesen.
 
-Eingesetzte Technologien
+### Eingesetzte Technologien
 - Git – Versionsverwaltung des Quellcodes
 - GitHub – Repository- und Projektverwaltung
 - Datenbanksystem – Speicherung von Patienten-, Behandlungs- und Vitaldaten
 - Backend-Technologien – Verwaltung der Geschäftslogik und Überwachung von Gesundheitsdaten
 - Frontend-Technologien – Benutzeroberfläche zur Verwaltung und Visualisierung von Patientendaten
 - Benachrichtigungssystem – Automatische Warnungen bei kritischen Gesundheitswerten
+
+## Chronologische Projektentwicklung
+Der vollständige Quellcode des Projekts sowie die Versionshistorie sind im GitHub-Repository MediTrack verfügbar: https://github.com/s64470/MediTrack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ab hier löschen!!!!
+Aufgabenstellung:
+Chronologische Projektentwicklung
+Repository Setup und Grundlagen
+- Repository: [Link zum Repo]; ggf. Konfigura?on sowie wich?ge Entscheidungen zur Architektur
+  CI/(CD-)ImplementaAon
+- Pipeline-Au[au: [Kernaspekte der CI-Struktur], Automa?sierungsprozesse (Screenshot der Pipeline-Konfig.)
+  Domain-Modellierung und Event-Struktur
+- Iden?fizierte (+für das Projekt selek?erte) Domain Events:
+1. [Event 1]: [Bedeutung und Kontext]
+2. [Event 2]: [Bedeutung und Kontext]
+3. [Weitere priorisierte Events...]
+- DDD-Structure: Bounded Contexts, Aggregate Roots etc. [Visualisierung Ihrer Domain-Struktur]
+  Projekt-ImplemenAerung
+- Projektstruktur: [IDE-Screenshot mit Projektstruktur]
+- Teststrategie: TDD-Ansatz; Testabdeckung kri?scher Komponenten; Ihr Vorgehen
+- Zum Backend und UI/UX
+- Backend-Architektur: Kernkomponenten und deren Zusammenspiel, implemen?erte Services,
+  Datenmodell (inMemory / SQLite/.?) usw.
+- UI-Komponenten:
+  o Nutzerinterak?onsfluss [Screenshots der Hauptmasken]
+  o Technische Besonderheiten: …
+  o [Spezifische Implemen?erungsdetails]
+  o [Op?mierungen]
+  LLM-IntegraAon
+- Einsatzbereiche: Testgenerierung? Code-Op?mierung? [Weitere LLM-Anwendungen]
+- Konkrete Beispiele des Mehrwerts
+  Technische Herausforderungen
+- [Herausforderung 1]: [Lösungsansatz]
+- [Herausforderung 2]: [Lösungsansatz]
+Projektabschluss
+- Erreichte Meilensteine
+- Konnten alle priorisierten Events implemen?ert werden?
+- Welche Meilensteine konnten nicht erreicht werden?
+- Technische Innova?onen
+- Lessons Learned und Reflexion
+  Hinweise zur Dokumenta4on:
+- Gesamtumfang: ca. 4-5 Seiten, Priorisierung der relevantesten Aspekte je nach Projekt, Erwähnung
+  eingesetzter Technologien und Darstellung der (technischen und LLM basierenden) Erfahrungen
+- Abgabe der Dokumenta?on: via Moodle, vor der finalen Präsenta?on
