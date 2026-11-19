@@ -1,4 +1,4 @@
-# MediTrack
+con# MediTrack
 
 Finale Dokumentation der semesterbegleitenden Projektarbeit - Team 4
 
@@ -17,7 +17,7 @@ Moderne Softwareentwicklung
 ### Hochschule
 
 BHT - Berliner Hochschule für Technik <br>
-TH Lübeck
+TH Lübeck - Technische Hochschule Lübeck
 
 ### Studiengang
 
@@ -25,11 +25,11 @@ Master Medieninformatik (online)
 
 ### Dozent/in
 
-Prof. Dr. S. Ipek-Ugay
+Prof. Dr. Selcan Ipek-Ugay
 
 ### Abgabedatum
 
-TT.MM.JJJJ
+TT.MM.2027
 
 ## Projektthema
 
@@ -60,6 +60,24 @@ Für die Versionsverwaltung kommt Git zum Einsatz. Die Quellcodeverwaltung sowie
 ## Chronologische Projektentwicklung
 Der vollständige Quellcode des Projekts sowie die Versionshistorie sind im GitHub-Repository MediTrack verfügbar: https://github.com/s64470/MediTrack
 
+### CI/(CD-)Implementation/Pipeline Aufbau
+Die CI-Pipeline wird automatisch ausgeführt, sobald Änderungen per `Push` auf den `main-Branch` übertragen oder ein `Pull Request` gegen den `main-Branch` erstellt wird. Dadurch wird sichergestellt, dass neuer Code vor der Integration automatisch geprüft wird. 
+
+Zunächst wird der aktuelle Quellcode aus dem GitHub-Repository ausgecheckt. Anschließend überprüft die Pipeline, ob ein Maven-Projekt vorliegt, indem nach den notwendigen Maven-Konfigurationsdateien gesucht wird. Wird ein Maven-Projekt erkannt, richtet GitHub Actions eine Java-21-Umgebung (Temurin Distribution) ein und aktiviert einen Maven-Cache, um Build-Zeiten zu verkürzen.
+
+Im nächsten Schritt wird das Projekt mit dem Befehl `mvn clean verify` gebaut und getestet. Dabei werden sowohl die Anwendung kompiliert als auch alle vorhandenen automatisierten Tests ausgeführt. Schlägt einer dieser Schritte fehl, wird die Pipeline abgebrochen.
+
+Nach erfolgreichem Build werden die erzeugten `JAR-Artefakte` aus dem target-Verzeichnis hochgeladen und für 14 Tage gespeichert. Diese Artefakte können anschließend heruntergeladen oder in weiteren Deployment-Schritten verwendet werden.
+
+Ablauf der Pipeline:
+- Push oder Pull Request auf main
+- Quellcode aus Repository laden
+- Maven-Projekt erkennen
+- Java 21 und Maven-Cache konfigurieren
+- Projekt bauen und Tests ausführen (`mvn clean verify`)
+- Erzeugte JAR-Datei als Artefakt speichern
+
+Da die Pipeline derzeit nur den Build-, Test- und Artefakt-Upload-Prozess umfasst, handelt es sich streng genommen um eine Continuous Integration (CI)-Pipeline. Ein automatisches Deployment (CD) ist im gezeigten Workflow noch nicht implementiert.
 
 
 
@@ -74,7 +92,8 @@ Der vollständige Quellcode des Projekts sowie die Versionshistorie sind im GitH
 
 
 
-Ab hier löschen!!!!
+
+Ab hier löschen!!!! <br>
 Aufgabenstellung:
 Chronologische Projektentwicklung
 Repository Setup und Grundlagen
