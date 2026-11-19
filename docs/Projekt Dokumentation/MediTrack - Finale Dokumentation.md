@@ -93,43 +93,82 @@ Da die Pipeline derzeit nur den Build-, Test- und Artefakt-Upload-Prozess umfass
 
 
 
-Ab hier löschen!!!! <br>
-Aufgabenstellung:
-Chronologische Projektentwicklung
-Repository Setup und Grundlagen
-- Repository: [Link zum Repo]; ggf. Konfigura?on sowie wich?ge Entscheidungen zur Architektur
-  CI/(CD-)ImplementaAon
-- Pipeline-Au[au: [Kernaspekte der CI-Struktur], Automa?sierungsprozesse (Screenshot der Pipeline-Konfig.)
-  Domain-Modellierung und Event-Struktur
-- Iden?fizierte (+für das Projekt selek?erte) Domain Events:
-1. [Event 1]: [Bedeutung und Kontext]
-2. [Event 2]: [Bedeutung und Kontext]
-3. [Weitere priorisierte Events...]
-- DDD-Structure: Bounded Contexts, Aggregate Roots etc. [Visualisierung Ihrer Domain-Struktur]
-  Projekt-ImplemenAerung
-- Projektstruktur: [IDE-Screenshot mit Projektstruktur]
-- Teststrategie: TDD-Ansatz; Testabdeckung kri?scher Komponenten; Ihr Vorgehen
-- Zum Backend und UI/UX
-- Backend-Architektur: Kernkomponenten und deren Zusammenspiel, implemen?erte Services,
-  Datenmodell (inMemory / SQLite/.?) usw.
-- UI-Komponenten:
-  o Nutzerinterak?onsfluss [Screenshots der Hauptmasken]
-  o Technische Besonderheiten: …
-  o [Spezifische Implemen?erungsdetails]
-  o [Op?mierungen]
-  LLM-IntegraAon
-- Einsatzbereiche: Testgenerierung? Code-Op?mierung? [Weitere LLM-Anwendungen]
-- Konkrete Beispiele des Mehrwerts
-  Technische Herausforderungen
-- [Herausforderung 1]: [Lösungsansatz]
-- [Herausforderung 2]: [Lösungsansatz]
-Projektabschluss
-- Erreichte Meilensteine
-- Konnten alle priorisierten Events implemen?ert werden?
-- Welche Meilensteine konnten nicht erreicht werden?
-- Technische Innova?onen
-- Lessons Learned und Reflexion
-  Hinweise zur Dokumenta4on:
-- Gesamtumfang: ca. 4-5 Seiten, Priorisierung der relevantesten Aspekte je nach Projekt, Erwähnung
-  eingesetzter Technologien und Darstellung der (technischen und LLM basierenden) Erfahrungen
-- Abgabe der Dokumenta?on: via Moodle, vor der finalen Präsenta?on
+[//]: # (Ab hier löschen!!!! <br>)
+
+[//]: # (Aufgabenstellung:)
+
+[//]: # (Chronologische Projektentwicklung)
+
+[//]: # (Repository Setup und Grundlagen)
+
+[//]: # (- Repository: [Link zum Repo]; ggf. Konfigura?on sowie wich?ge Entscheidungen zur Architektur)
+
+[//]: # (  CI/&#40;CD-&#41;ImplementaAon)
+
+[//]: # (- Pipeline-Au[au: [Kernaspekte der CI-Struktur], Automa?sierungsprozesse &#40;Screenshot der Pipeline-Konfig.&#41;)
+
+[//]: # (  Domain-Modellierung und Event-Struktur)
+
+[//]: # (- Iden?fizierte &#40;+für das Projekt selek?erte&#41; Domain Events:)
+
+[//]: # (1. [Event 1]: [Bedeutung und Kontext])
+
+[//]: # (2. [Event 2]: [Bedeutung und Kontext])
+
+[//]: # (3. [Weitere priorisierte Events...])
+
+[//]: # (- DDD-Structure: Bounded Contexts, Aggregate Roots etc. [Visualisierung Ihrer Domain-Struktur])
+
+[//]: # (  Projekt-ImplemenAerung)
+
+[//]: # (- Projektstruktur: [IDE-Screenshot mit Projektstruktur])
+
+[//]: # (- Teststrategie: TDD-Ansatz; Testabdeckung kri?scher Komponenten; Ihr Vorgehen)
+
+[//]: # (- Zum Backend und UI/UX)
+
+[//]: # (- Backend-Architektur: Kernkomponenten und deren Zusammenspiel, implemen?erte Services,)
+
+[//]: # (  Datenmodell &#40;inMemory / SQLite/.?&#41; usw.)
+
+[//]: # (- UI-Komponenten:)
+
+[//]: # (  o Nutzerinterak?onsfluss [Screenshots der Hauptmasken])
+
+[//]: # (  o Technische Besonderheiten: …)
+
+[//]: # (  o [Spezifische Implemen?erungsdetails])
+
+[//]: # (  o [Op?mierungen])
+
+[//]: # (  LLM-IntegraAon)
+
+[//]: # (- Einsatzbereiche: Testgenerierung? Code-Op?mierung? [Weitere LLM-Anwendungen])
+
+[//]: # (- Konkrete Beispiele des Mehrwerts)
+
+[//]: # (  Technische Herausforderungen)
+
+[//]: # (- [Herausforderung 1]: [Lösungsansatz])
+
+[//]: # (- [Herausforderung 2]: [Lösungsansatz])
+
+[//]: # (Projektabschluss)
+
+[//]: # (- Erreichte Meilensteine)
+
+[//]: # (- Konnten alle priorisierten Events implemen?ert werden?)
+
+[//]: # (- Welche Meilensteine konnten nicht erreicht werden?)
+
+[//]: # (- Technische Innova?onen)
+
+[//]: # (- Lessons Learned und Reflexion)
+
+[//]: # (  Hinweise zur Dokumenta4on:)
+
+[//]: # (- Gesamtumfang: ca. 4-5 Seiten, Priorisierung der relevantesten Aspekte je nach Projekt, Erwähnung)
+
+[//]: # (  eingesetzter Technologien und Darstellung der &#40;technischen und LLM basierenden&#41; Erfahrungen)
+
+[//]: # (- Abgabe der Dokumenta?on: via Moodle, vor der finalen Präsenta?on)
