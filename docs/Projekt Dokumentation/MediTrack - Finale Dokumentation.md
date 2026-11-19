@@ -1,4 +1,4 @@
-# MediTrack
+con# MediTrack
 
 Finale Dokumentation der semesterbegleitenden Projektarbeit - Team 4
 
@@ -17,7 +17,7 @@ Moderne Softwareentwicklung
 ### Hochschule
 
 BHT - Berliner Hochschule für Technik <br>
-TH Lübeck
+TH Lübeck - Technische Hochschule Lübeck
 
 ### Studiengang
 
@@ -25,11 +25,11 @@ Master Medieninformatik (online)
 
 ### Dozent/in
 
-Prof. Dr. S. Ipek-Ugay
+Prof. Dr. Selcan Ipek-Ugay
 
 ### Abgabedatum
 
-TT.MM.JJJJ
+TT.MM.2027
 
 ## Projektthema
 
@@ -60,6 +60,24 @@ Für die Versionsverwaltung kommt Git zum Einsatz. Die Quellcodeverwaltung sowie
 ## Chronologische Projektentwicklung
 Der vollständige Quellcode des Projekts sowie die Versionshistorie sind im GitHub-Repository MediTrack verfügbar: https://github.com/s64470/MediTrack
 
+### CI/(CD-)Implementation/Pipeline Aufbau
+Die CI-Pipeline wird automatisch ausgeführt, sobald Änderungen per `Push` auf den `main-Branch` übertragen oder ein `Pull Request` gegen den `main-Branch` erstellt wird. Dadurch wird sichergestellt, dass neuer Code vor der Integration automatisch geprüft wird. 
+
+Zunächst wird der aktuelle Quellcode aus dem GitHub-Repository ausgecheckt. Anschließend überprüft die Pipeline, ob ein Maven-Projekt vorliegt, indem nach den notwendigen Maven-Konfigurationsdateien gesucht wird. Wird ein Maven-Projekt erkannt, richtet GitHub Actions eine Java-21-Umgebung (Temurin Distribution) ein und aktiviert einen Maven-Cache, um Build-Zeiten zu verkürzen.
+
+Im nächsten Schritt wird das Projekt mit dem Befehl `mvn clean verify` gebaut und getestet. Dabei werden sowohl die Anwendung kompiliert als auch alle vorhandenen automatisierten Tests ausgeführt. Schlägt einer dieser Schritte fehl, wird die Pipeline abgebrochen.
+
+Nach erfolgreichem Build werden die erzeugten `JAR-Artefakte` aus dem target-Verzeichnis hochgeladen und für 14 Tage gespeichert. Diese Artefakte können anschließend heruntergeladen oder in weiteren Deployment-Schritten verwendet werden.
+
+Ablauf der Pipeline:
+- Push oder Pull Request auf main
+- Quellcode aus Repository laden
+- Maven-Projekt erkennen
+- Java 21 und Maven-Cache konfigurieren
+- Projekt bauen und Tests ausführen (`mvn clean verify`)
+- Erzeugte JAR-Datei als Artefakt speichern
+
+Da die Pipeline derzeit nur den Build-, Test- und Artefakt-Upload-Prozess umfasst, handelt es sich streng genommen um eine Continuous Integration (CI)-Pipeline. Ein automatisches Deployment (CD) ist im gezeigten Workflow noch nicht implementiert.
 
 
 
@@ -74,43 +92,83 @@ Der vollständige Quellcode des Projekts sowie die Versionshistorie sind im GitH
 
 
 
-Ab hier löschen!!!!
-Aufgabenstellung:
-Chronologische Projektentwicklung
-Repository Setup und Grundlagen
-- Repository: [Link zum Repo]; ggf. Konfigura?on sowie wich?ge Entscheidungen zur Architektur
-  CI/(CD-)ImplementaAon
-- Pipeline-Au[au: [Kernaspekte der CI-Struktur], Automa?sierungsprozesse (Screenshot der Pipeline-Konfig.)
-  Domain-Modellierung und Event-Struktur
-- Iden?fizierte (+für das Projekt selek?erte) Domain Events:
-1. [Event 1]: [Bedeutung und Kontext]
-2. [Event 2]: [Bedeutung und Kontext]
-3. [Weitere priorisierte Events...]
-- DDD-Structure: Bounded Contexts, Aggregate Roots etc. [Visualisierung Ihrer Domain-Struktur]
-  Projekt-ImplemenAerung
-- Projektstruktur: [IDE-Screenshot mit Projektstruktur]
-- Teststrategie: TDD-Ansatz; Testabdeckung kri?scher Komponenten; Ihr Vorgehen
-- Zum Backend und UI/UX
-- Backend-Architektur: Kernkomponenten und deren Zusammenspiel, implemen?erte Services,
-  Datenmodell (inMemory / SQLite/.?) usw.
-- UI-Komponenten:
-  o Nutzerinterak?onsfluss [Screenshots der Hauptmasken]
-  o Technische Besonderheiten: …
-  o [Spezifische Implemen?erungsdetails]
-  o [Op?mierungen]
-  LLM-IntegraAon
-- Einsatzbereiche: Testgenerierung? Code-Op?mierung? [Weitere LLM-Anwendungen]
-- Konkrete Beispiele des Mehrwerts
-  Technische Herausforderungen
-- [Herausforderung 1]: [Lösungsansatz]
-- [Herausforderung 2]: [Lösungsansatz]
-Projektabschluss
-- Erreichte Meilensteine
-- Konnten alle priorisierten Events implemen?ert werden?
-- Welche Meilensteine konnten nicht erreicht werden?
-- Technische Innova?onen
-- Lessons Learned und Reflexion
-  Hinweise zur Dokumenta4on:
-- Gesamtumfang: ca. 4-5 Seiten, Priorisierung der relevantesten Aspekte je nach Projekt, Erwähnung
-  eingesetzter Technologien und Darstellung der (technischen und LLM basierenden) Erfahrungen
-- Abgabe der Dokumenta?on: via Moodle, vor der finalen Präsenta?on
+
+[//]: # (Ab hier löschen!!!! <br>)
+
+[//]: # (Aufgabenstellung:)
+
+[//]: # (Chronologische Projektentwicklung)
+
+[//]: # (Repository Setup und Grundlagen)
+
+[//]: # (- Repository: [Link zum Repo]; ggf. Konfigura?on sowie wich?ge Entscheidungen zur Architektur)
+
+[//]: # (  CI/&#40;CD-&#41;ImplementaAon)
+
+[//]: # (- Pipeline-Au[au: [Kernaspekte der CI-Struktur], Automa?sierungsprozesse &#40;Screenshot der Pipeline-Konfig.&#41;)
+
+[//]: # (  Domain-Modellierung und Event-Struktur)
+
+[//]: # (- Iden?fizierte &#40;+für das Projekt selek?erte&#41; Domain Events:)
+
+[//]: # (1. [Event 1]: [Bedeutung und Kontext])
+
+[//]: # (2. [Event 2]: [Bedeutung und Kontext])
+
+[//]: # (3. [Weitere priorisierte Events...])
+
+[//]: # (- DDD-Structure: Bounded Contexts, Aggregate Roots etc. [Visualisierung Ihrer Domain-Struktur])
+
+[//]: # (  Projekt-ImplemenAerung)
+
+[//]: # (- Projektstruktur: [IDE-Screenshot mit Projektstruktur])
+
+[//]: # (- Teststrategie: TDD-Ansatz; Testabdeckung kri?scher Komponenten; Ihr Vorgehen)
+
+[//]: # (- Zum Backend und UI/UX)
+
+[//]: # (- Backend-Architektur: Kernkomponenten und deren Zusammenspiel, implemen?erte Services,)
+
+[//]: # (  Datenmodell &#40;inMemory / SQLite/.?&#41; usw.)
+
+[//]: # (- UI-Komponenten:)
+
+[//]: # (  o Nutzerinterak?onsfluss [Screenshots der Hauptmasken])
+
+[//]: # (  o Technische Besonderheiten: …)
+
+[//]: # (  o [Spezifische Implemen?erungsdetails])
+
+[//]: # (  o [Op?mierungen])
+
+[//]: # (  LLM-IntegraAon)
+
+[//]: # (- Einsatzbereiche: Testgenerierung? Code-Op?mierung? [Weitere LLM-Anwendungen])
+
+[//]: # (- Konkrete Beispiele des Mehrwerts)
+
+[//]: # (  Technische Herausforderungen)
+
+[//]: # (- [Herausforderung 1]: [Lösungsansatz])
+
+[//]: # (- [Herausforderung 2]: [Lösungsansatz])
+
+[//]: # (Projektabschluss)
+
+[//]: # (- Erreichte Meilensteine)
+
+[//]: # (- Konnten alle priorisierten Events implemen?ert werden?)
+
+[//]: # (- Welche Meilensteine konnten nicht erreicht werden?)
+
+[//]: # (- Technische Innova?onen)
+
+[//]: # (- Lessons Learned und Reflexion)
+
+[//]: # (  Hinweise zur Dokumenta4on:)
+
+[//]: # (- Gesamtumfang: ca. 4-5 Seiten, Priorisierung der relevantesten Aspekte je nach Projekt, Erwähnung)
+
+[//]: # (  eingesetzter Technologien und Darstellung der &#40;technischen und LLM basierenden&#41; Erfahrungen)
+
+[//]: # (- Abgabe der Dokumenta?on: via Moodle, vor der finalen Präsenta?on)
