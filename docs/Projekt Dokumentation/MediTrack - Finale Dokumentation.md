@@ -1,4 +1,4 @@
-con# MediTrack
+# MediTrack
 
 Finale Dokumentation der semesterbegleitenden Projektarbeit - Team 4
 
