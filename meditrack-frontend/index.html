@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>MediTrack</h1>
+
+<div class="container">
+
+    <section class="card">
+        <h2>Patient erfassen</h2>
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="alter" placeholder="Alter">
+
+        <button onclick="addPatient()">
+            Patient hinzufügen
+        </button>
+    </section>
+
+    <section class="card">
+        <h2>Patientenliste</h2>
+        <ul id="patientList"></ul>
+    </section>
+
+    <section class="card">
+        <h2>Termin anlegen</h2>
+
+        <input type="text" id="patientId"
+               placeholder="Patienten-ID">
+
+        <input type="datetime-local"
+               id="appointmentDate">
+
+        <button onclick="addAppointment()">
+            Termin speichern
+        </button>
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
