@@ -3,47 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediTrack Dashboard</title>
+    <title>MediTrack - Patientendatenverwaltung</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>MediTrack</h1>
+<header>
+    <h1>MediTrack</h1>
+    <p>Patientendatenverwaltung und Vitaldatenüberwachung</p>
+</header>
 
 <div class="container">
 
+    <!-- Anmeldung -->
     <section class="card">
-        <h2>Patient erfassen</h2>
+        <h2>Anmeldung</h2>
 
-        <input type="text" id="name" placeholder="Name">
-        <input type="number" id="alter" placeholder="Alter">
+        <input type="email" placeholder="E-Mail-Adresse">
+        <input type="password" placeholder="Passwort">
 
-        <button onclick="addPatient()">
-            Patient hinzufügen
-        </button>
+        <button>Anmelden</button>
     </section>
 
+    <!-- Patientenregistrierung -->
     <section class="card">
-        <h2>Patientenliste</h2>
-        <ul id="patientList"></ul>
+        <h2>Patientenregistrierung</h2>
+
+        <input type="text" placeholder="Vor- und Nachname">
+        <input type="date" placeholder="Geburtsdatum">
+
+        <textarea rows="4" placeholder="Krankheitsgeschichte"></textarea>
+
+        <button>Patient registrieren</button>
     </section>
 
+    <!-- Patientenübersicht -->
     <section class="card">
-        <h2>Termin anlegen</h2>
+        <h2>Patientenübersicht</h2>
 
-        <input type="text" id="patientId"
-               placeholder="Patienten-ID">
+        <ul id="patientList">
+            <li>Max Mustermann</li>
+            <li>Maria Müller</li>
+            <li>Peter Schmidt</li>
+        </ul>
+    </section>
 
-        <input type="datetime-local"
-               id="appointmentDate">
+    <!-- Vitaldaten -->
+    <section class="card">
+        <h2>Vitaldaten erfassen</h2>
 
-        <button onclick="addAppointment()">
-            Termin speichern
-        </button>
+        <input type="number" placeholder="Blutdruck (mmHg)">
+        <input type="number" placeholder="Puls (bpm)">
+        <input type="number" step="0.1" placeholder="Temperatur (°C)">
+
+        <button>Vitaldaten speichern</button>
+    </section>
+
+    <!-- Terminverwaltung -->
+    <section class="card">
+        <h2>Terminverwaltung</h2>
+
+        <input type="text" placeholder="Patienten-ID">
+        <input type="datetime-local">
+
+        <button>Termin anlegen</button>
+    </section>
+
+    <!-- Benachrichtigungen -->
+    <section class="card">
+        <h2>Benachrichtigungssystem</h2>
+
+        <ul>
+            <li>⚠️ Blutdruck von Patient #102 überschreitet den Grenzwert.</li>
+            <li>⚠️ Temperatur von Patient #205 liegt über 39 °C.</li>
+            <li>✅ Benachrichtigung an behandelnden Arzt gesendet.</li>
+        </ul>
+    </section>
+
+    <!-- Behandlungshistorie -->
+    <section class="card">
+        <h2>Behandlungsübersicht</h2>
+
+        <ul>
+            <li>12.11.2026 - Allgemeine Untersuchung</li>
+            <li>15.11.2026 - Blutuntersuchung</li>
+            <li>18.11.2026 - Medikamentenanpassung</li>
+            <li>22.11.2026 - Nachkontrolle</li>
+        </ul>
     </section>
 
 </div>
 
 <script src="app.js"></script>
+
 </body>
 </html>
