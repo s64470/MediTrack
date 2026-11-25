@@ -1,3 +1,5 @@
+# Moodlekkurz abgebrochen
+
 # Git-Handout für Anfänger
 
 ## Übung 1 – Moderne Softwareentwicklung
@@ -274,11 +276,11 @@ git pull origin main
 
 # Dokumentation der Zusammenarbeit
 
-| Teammitglied                                                                                   |
-|------------------------------------------------------------------------------------------------|
-| Daniel Riel (Was ist Git? + Grundlegende Git-Befehle)                                          |
-| Lara Spies  (Branches + Git mit IntelliJ/PyCharm)                                              |
-| Thijambaki Kirushnathasan  (Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen) |
+| Teammitglied                                                                                                   |
+|----------------------------------------------------------------------------------------------------------------|
+| Daniel Riel (Was ist Git? + Grundlegende Git-Befehle)                                                          |
+| Lara Spies  (Branches + Git mit IntelliJ/PyCharm) (ausgeschieden)                                              |
+| Thijambaki Kirushnathasan  (Umgang mit Merge-Konflikten + Nützliche Git-Tools und Plattformen) (ausgeschieden) |
 
 ## Übung 2 – CI/CD
 
