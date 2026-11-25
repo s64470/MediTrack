@@ -1,4 +1,4 @@
-# Moodlekkurz abgebrochen
+# Vorzeitiger Projektabbruch infolge des frühzeitigen Ausstiegs einzelner Personen
 
 # Git-Handout für Anfänger
 
