@@ -1,4 +1,5 @@
 # Vorzeitiger Projektabbruch infolge des frühzeitigen Ausstiegs einzelner Personen
+# Nach Rücksprache wurde ich (Daniel Riel) aufgrund des Projektabbruchs meines bisherigen Teams der Gruppe 13 mit dem Thema „E‑Vote“ zugeteilt.
 
 # Git-Handout für Anfänger
 
